@@ -1,35 +1,4 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:h_bridge_controller_5x3
-LIBS:components
+EESchema Schematic File Version 4
 EELAYER 26 0
 EELAYER END
 $Descr A 11000 8500
@@ -47,7 +16,7 @@ $EndDescr
 NoConn ~ 1350 1300
 NoConn ~ 1350 1500
 $Comp
-L +5V #PWR01
+L power:+5V #PWR01
 U 1 1 5474AD6E
 P 850 1250
 F 0 "#PWR01" H 850 1340 20  0001 C CNN
@@ -58,7 +27,7 @@ F 3 "" H 850 1250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG02
+L power:PWR_FLAG #FLG02
 U 1 1 5474AD82
 P 700 1250
 F 0 "#FLG02" H 700 1345 30  0001 C CNN
@@ -71,12 +40,12 @@ $EndComp
 Wire Wire Line
 	700  1250 700  1600
 Wire Wire Line
-	700  1600 1350 1600
+	700  1600 850  1600
 Wire Wire Line
 	850  1250 850  1600
 Connection ~ 850  1600
 $Comp
-L GND #PWR03
+L power:GND #PWR03
 U 1 1 5474ADAC
 P 850 1850
 F 0 "#PWR03" H 850 1850 30  0001 C CNN
@@ -89,7 +58,7 @@ $EndComp
 Wire Wire Line
 	1350 1700 850  1700
 Wire Wire Line
-	850  1700 850  1850
+	850  1700 850  1800
 Wire Wire Line
 	1350 1800 850  1800
 Connection ~ 850  1800
@@ -122,7 +91,7 @@ NoConn ~ 3550 5350
 NoConn ~ 3550 5450
 NoConn ~ 3550 5550
 $Comp
-L GND #PWR04
+L power:GND #PWR04
 U 1 1 5474C6BF
 P 950 7750
 F 0 "#PWR04" H 950 7750 30  0001 C CNN
@@ -133,7 +102,7 @@ F 3 "" H 950 7750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VAA #PWR05
+L power:VAA #PWR05
 U 1 1 5474C6E7
 P 950 7450
 F 0 "#PWR05" H 950 7510 30  0001 C CNN
@@ -144,7 +113,7 @@ F 3 "" H 950 7450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG06
+L power:PWR_FLAG #FLG06
 U 1 1 5474C703
 P 800 7450
 F 0 "#FLG06" H 800 7545 30  0001 C CNN
@@ -155,7 +124,7 @@ F 3 "" H 800 7450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG07
+L power:PWR_FLAG #FLG07
 U 1 1 5474C71B
 P 600 7550
 F 0 "#FLG07" H 600 7645 30  0001 C CNN
@@ -166,14 +135,14 @@ F 3 "" H 600 7550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	800  7550 1050 7550
+	800  7550 950  7550
 Wire Wire Line
 	800  7550 800  7450
 Wire Wire Line
 	950  7450 950  7550
 Connection ~ 950  7550
 Wire Wire Line
-	600  7650 1050 7650
+	600  7650 950  7650
 Wire Wire Line
 	600  7650 600  7550
 Wire Wire Line
@@ -184,7 +153,7 @@ Wire Wire Line
 Text Label 1000 1900 0    60   ~ 0
 V_IN
 $Comp
-L GND #PWR08
+L power:GND #PWR08
 U 1 1 547CC155
 P 1650 7150
 F 0 "#PWR08" H 1650 7150 30  0001 C CNN
@@ -195,7 +164,7 @@ F 3 "" H 1650 7150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VAA #PWR09
+L power:VAA #PWR09
 U 1 1 547CC477
 P 2700 7250
 F 0 "#PWR09" H 2700 7310 30  0001 C CNN
@@ -206,7 +175,7 @@ F 3 "" H 2700 7250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR010
+L power:GND #PWR010
 U 1 1 547CC4E0
 P 3550 7850
 F 0 "#PWR010" H 3550 7850 30  0001 C CNN
@@ -221,7 +190,7 @@ V_IN
 Text Label 1000 1700 0    60   ~ 0
 GND
 $Comp
-L PWR_JACK_2.5x5.5 P1
+L h_bridge_controller_5x3:PWR_JACK_2.5x5.5 P1
 U 1 1 5488FCDE
 P 1250 7600
 F 0 "P1" H 1250 7750 50  0000 C CNN
@@ -235,7 +204,7 @@ F 6 "CONN PWR JACK DC 2.5X5.5 8A T/H" H 1550 8050 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 10uF C2
+L h_bridge_controller_5x3:10uF C2
 U 1 1 548925C4
 P 2950 7550
 F 0 "C2" H 2950 7650 40  0000 L CNN
@@ -249,7 +218,7 @@ F 6 "CAP CER 10UF 50V 10% X7S 1210" H 3250 7950 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 10uF C3
+L h_bridge_controller_5x3:10uF C3
 U 1 1 54892682
 P 4050 7550
 F 0 "C3" H 4050 7650 40  0000 L CNN
@@ -271,7 +240,7 @@ Wire Wire Line
 Text Label 3750 2800 0    60   ~ 0
 TX3
 $Comp
-L GND #PWR011
+L power:GND #PWR011
 U 1 1 54AD9AEC
 P 5450 7850
 F 0 "#PWR011" H 5450 7600 60  0001 C CNN
@@ -284,7 +253,7 @@ $EndComp
 Wire Wire Line
 	5350 7600 5450 7600
 Wire Wire Line
-	5450 7600 5450 7850
+	5450 7600 5450 7700
 Wire Wire Line
 	5350 7700 5450 7700
 Connection ~ 5450 7700
@@ -300,7 +269,7 @@ Text Label 3750 2300 0    60   ~ 0
 BNC_B
 NoConn ~ 3550 1200
 $Comp
-L BNC_DOUBLE_RA P7
+L h_bridge_controller_5x3:BNC_DOUBLE_RA P7
 U 1 1 54ADBC63
 P 5100 7650
 F 0 "P7" H 5100 7800 50  0000 C CNN
@@ -317,7 +286,7 @@ NoConn ~ 1350 4200
 NoConn ~ 3550 900 
 NoConn ~ 3550 800 
 $Comp
-L +5VD #PWR012
+L power:+5VD #PWR012
 U 1 1 54BEF7A6
 P 3800 3700
 F 0 "#PWR012" H 3800 3550 60  0001 C CNN
@@ -328,7 +297,7 @@ F 3 "" H 3800 3700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG013
+L power:PWR_FLAG #FLG013
 U 1 1 54BEF7BA
 P 4150 3700
 F 0 "#FLG013" H 4150 3795 30  0001 C CNN
@@ -341,7 +310,7 @@ $EndComp
 Wire Wire Line
 	4150 3750 4150 3700
 Wire Wire Line
-	3550 3750 4150 3750
+	3550 3750 3800 3750
 Wire Wire Line
 	3800 3700 3800 3750
 Connection ~ 3800 3750
@@ -379,7 +348,7 @@ RX1
 NoConn ~ 1350 4650
 NoConn ~ 1350 2100
 $Comp
-L HEADER_01X03_SMD_RA P2
+L h_bridge_controller_5x3:HEADER_01X03_SMD_RA P2
 U 1 1 56CE8FE8
 P 650 6700
 F 0 "P2" H 650 6500 50  0000 C CNN
@@ -405,7 +374,7 @@ GND
 Text Label 900  6800 0    60   ~ 0
 RX0
 $Comp
-L HEADER_01X03_SMD_RA P3
+L h_bridge_controller_5x3:HEADER_01X03_SMD_RA P3
 U 1 1 56CEA77A
 P 1250 6700
 F 0 "P3" H 1250 6500 50  0000 C CNN
@@ -419,7 +388,7 @@ F 6 "CONN HEADER 3POS R/A SMD GOLD" H 1550 7200 60  0001 C CNN "Description"
 	-1   0    0    1   
 $EndComp
 $Comp
-L HEADER_01X03_SMD_RA P4
+L h_bridge_controller_5x3:HEADER_01X03_SMD_RA P4
 U 1 1 56CEA9F2
 P 1850 6700
 F 0 "P4" H 1850 6500 50  0000 C CNN
@@ -433,7 +402,7 @@ F 6 "CONN HEADER 3POS R/A SMD GOLD" H 2150 7200 60  0001 C CNN "Description"
 	-1   0    0    1   
 $EndComp
 $Comp
-L HEADER_01X03_SMD_RA P5
+L h_bridge_controller_5x3:HEADER_01X03_SMD_RA P5
 U 1 1 56CEAAE8
 P 2450 6700
 F 0 "P5" H 2450 6500 50  0000 C CNN
@@ -483,7 +452,7 @@ GND
 Text Label 2700 6800 0    60   ~ 0
 RX3
 $Comp
-L HEADER_01X02_SMD_RA P6
+L h_bridge_controller_5x3:HEADER_01X02_SMD_RA P6
 U 1 1 56CF00ED
 P 3050 6700
 F 0 "P6" H 3050 6550 50  0000 C CNN
@@ -497,7 +466,7 @@ F 6 "CONN HEADER 2POS R/A SMD GOLD" H 3350 7150 60  0001 C CNN "Description"
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR014
+L power:GND #PWR014
 U 1 1 56CF0FA4
 P 3300 6800
 F 0 "#PWR014" H 3300 6800 30  0001 C CNN
@@ -516,7 +485,7 @@ Wire Wire Line
 Wire Wire Line
 	3300 6750 3300 6800
 $Comp
-L VAA #PWR015
+L power:VAA #PWR015
 U 1 1 56CF9310
 P 2050 7250
 F 0 "#PWR015" H 2050 7310 30  0001 C CNN
@@ -529,7 +498,7 @@ $EndComp
 NoConn ~ 3550 3400
 NoConn ~ 3550 3500
 $Comp
-L SPST_SLIDE_AS SW1
+L h_bridge_controller_5x3:SPST_SLIDE_AS SW1
 U 1 1 56CFEB9B
 P 1550 7550
 F 0 "SW1" H 1475 7475 40  0000 L CNN
@@ -543,7 +512,7 @@ F 6 "SWITCH SLIDE SPST 0.4VA 28V" H 1850 7950 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L 10uF C1
+L h_bridge_controller_5x3:10uF C1
 U 1 1 56D083E8
 P 2700 7550
 F 0 "C1" H 2700 7650 40  0000 L CNN
@@ -557,7 +526,7 @@ F 6 "CAP CER 10UF 50V 10% X7S 1210" H 3000 7950 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L VAA #PWR016
+L power:VAA #PWR016
 U 1 1 56D7916A
 P 3450 6650
 F 0 "#PWR016" H 3450 6500 60  0001 C CNN
@@ -572,7 +541,7 @@ NoConn ~ 1350 4300
 NoConn ~ 1350 4400
 NoConn ~ 1350 4500
 $Comp
-L LED_24V L1
+L h_bridge_controller_5x3:LED_24V L1
 U 1 1 5702D59F
 P 2050 7550
 F 0 "L1" H 2050 7450 50  0000 C CNN
@@ -586,24 +555,24 @@ F 6 "LED 2MM 24V VERTICAL RED PC MNT" H 2350 7950 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2700 7250 2700 7350
+	2700 7250 2700 7300
 Wire Wire Line
-	2700 7300 3150 7300
+	2700 7300 2950 7300
 Connection ~ 2700 7300
 Wire Wire Line
 	2700 7750 2700 7800
 Wire Wire Line
-	2700 7800 4050 7800
+	2700 7800 2950 7800
 Wire Wire Line
 	4050 7800 4050 7750
 Wire Wire Line
-	3550 7650 3550 7850
+	3550 7650 3550 7800
 Connection ~ 3550 7800
 Wire Wire Line
 	2950 7750 2950 7800
 Connection ~ 2950 7800
 Wire Wire Line
-	3950 7300 4150 7300
+	3950 7300 4050 7300
 Wire Wire Line
 	4050 7350 4050 7300
 Connection ~ 4050 7300
@@ -612,7 +581,7 @@ Wire Wire Line
 Connection ~ 2950 7300
 NoConn ~ 3550 5250
 $Comp
-L ARDUINO_MEGA ARDUINO1
+L h_bridge_controller_5x3:ARDUINO_MEGA ARDUINO1
 U 1 1 54AD3990
 P 2500 3350
 F 0 "ARDUINO1" H 2550 6100 60  0000 C CNN
@@ -664,7 +633,7 @@ Text Label 3750 2400 0    60   ~ 0
 BNC_A
 NoConn ~ 1350 4750
 $Comp
-L CONV_DC_DC_9V_1A REG1
+L h_bridge_controller_5x3:CONV_DC_DC_9V_1A REG1
 U 1 1 58790DAF
 P 3550 7300
 F 0 "REG1" H 3550 7547 60  0000 C CNN
@@ -678,7 +647,7 @@ F 6 "CONV DC/DC 1A 9V OUT SIP VERT" H 4050 7300 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L diode_schottky_45V_10A D1
+L h_bridge_controller_5x3:diode_schottky_45V_10A D1
 U 1 1 587921BF
 P 3600 6700
 F 0 "D1" H 3600 6587 50  0000 C CNN
@@ -692,7 +661,7 @@ F 6 "DIODE SCHOTTKY 45V 10A CFP15" H 3850 7080 60  0001 C CNN "Description"
 	-1   0    0    1   
 $EndComp
 $Comp
-L VCC #PWR025
+L power:VCC #PWR025
 U 1 1 58792C3A
 P 3750 6650
 F 0 "#PWR025" H 3750 6500 50  0001 C CNN
@@ -703,7 +672,7 @@ F 3 "" H 3750 6650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VCC #PWR026
+L power:VCC #PWR026
 U 1 1 58792CD9
 P 3300 6600
 F 0 "#PWR026" H 3300 6450 50  0001 C CNN
@@ -718,11 +687,11 @@ Wire Wire Line
 Wire Wire Line
 	3450 6700 3500 6700
 Wire Wire Line
-	3700 6700 3900 6700
+	3700 6700 3750 6700
 Wire Wire Line
 	3750 6700 3750 6650
 $Comp
-L PWR_FLAG #FLG027
+L power:PWR_FLAG #FLG027
 U 1 1 58793192
 P 3900 6600
 F 0 "#FLG027" H 3900 6695 30  0001 C CNN
@@ -743,4 +712,30 @@ NoConn ~ 3550 1300
 NoConn ~ 1350 5150
 NoConn ~ 1350 5050
 NoConn ~ 1350 4950
+Wire Wire Line
+	850  1600 1350 1600
+Wire Wire Line
+	850  1800 850  1850
+Wire Wire Line
+	950  7550 1050 7550
+Wire Wire Line
+	950  7650 1050 7650
+Wire Wire Line
+	5450 7700 5450 7850
+Wire Wire Line
+	3800 3750 4150 3750
+Wire Wire Line
+	2700 7300 2700 7350
+Wire Wire Line
+	3550 7800 4050 7800
+Wire Wire Line
+	3550 7800 3550 7850
+Wire Wire Line
+	2950 7800 3550 7800
+Wire Wire Line
+	4050 7300 4150 7300
+Wire Wire Line
+	2950 7300 3150 7300
+Wire Wire Line
+	3750 6700 3900 6700
 $EndSCHEMATC
